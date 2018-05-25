@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TaskGroup extends Model
+class TimesheetItem extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,14 +12,6 @@ class TaskGroup extends Model
      * @var array
      */
     protected $fillable = [
-        'name'
+        'hour', 'comment'
     ];
-
-    /**
-     * Get the tasks for the task group
-     */
-    public function tasks()
-    {
-        return $this->hasMany('App\Task');
-    }
 }

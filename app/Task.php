@@ -6,5 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    //
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name'
+    ];
+
+    /**
+     * Get the timesheets for the task
+     */
+    public function timesheets()
+    {
+        return $this->hasMany('App\Timesheet');
+    }
 }
