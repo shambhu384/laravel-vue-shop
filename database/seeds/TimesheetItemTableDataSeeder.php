@@ -12,11 +12,11 @@ class TimesheetItemTableDataSeeder extends Seeder
     public function run()
     {
         $data = [
-            [ 4, 4.5, 'Comment 1'],
-            [ 5, 3.5, 'Comment 2'],
-            [ 6, 2.3, 'Comment 3'],
-            [ 7, 1, 'Comment 3'],
-            [ 8, 1, 'Comment 4'],
+            [ 1, 4.5, 'Comment 1'],
+            [ 2, 3.5, 'Comment 2'],
+            [ 3, 2.3, 'Comment 3'],
+            [ 4, 1, 'Comment 3'],
+            [ 2, 1, 'Comment 4'],
         ];
         foreach($data as $item) {
             DB::table('timesheet_items')->insert([
