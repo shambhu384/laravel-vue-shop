@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\TaskGroup;
+use App\Timesheet;
 
-class TaskGroupController extends Controller
+class TimesheetController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class TaskGroupController extends Controller
      */
     public function index()
     {
-        return TaskGroup::all();
+        return Timesheet::all();
     }
 
     /**
@@ -26,6 +26,7 @@ class TaskGroupController extends Controller
      */
     public function store(Request $request)
     {
+        //
     }
 
     /**
@@ -36,8 +37,7 @@ class TaskGroupController extends Controller
      */
     public function show($id)
     {
-        //
-        return TaskGroup::find($id);
+        return Timesheet::find($id);
     }
 
     /**

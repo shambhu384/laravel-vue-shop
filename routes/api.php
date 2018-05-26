@@ -13,10 +13,26 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+ */
 
-Route::resource('tasks','Api\TaskController');
-Route::resource('timesheets','Api\TimesheetController');
-Route::resource('taskgroups','Api\TaskGroupController');
+Route::post('register', 'AuthController@register');
+Route::post('login', 'AuthController@login');
+Route::post('recover', 'AuthController@recover');
+
+Route::group(['middleware' => ['jwt.auth']], function() {
+
+    Route::get('logout', 'AuthController@logout');
+    Route::post('refresh', 'AuthController@refresh');
+    Route::post('me', 'AuthController@me');
+    Route::get('test', function(){
+        return response()->json(['foo'=>'bar']);
+    });
+
+    Route::resource('tasks','TaskController');
+    Route::resource('timesheets','TimesheetController');
+    Route::resource('taskgroups','TaskGroupController');
+
+});
