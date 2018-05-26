@@ -8,7 +8,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import ExampleComponent from './components/ExampleComponent.vue'
+import AppComponent from './components/app-component.vue'
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -16,7 +16,8 @@ import ExampleComponent from './components/ExampleComponent.vue'
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-//Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('app-component', require('./components/app-component.vue'));
+Vue.component('task-component', require('./components/TaskComponent.vue'));
 
 
 const app = new Vue({
@@ -25,6 +26,6 @@ const app = new Vue({
 		selected: null
 	},
 	components: {
-		ExampleComponent,
+		AppComponent,
 	}
 });
