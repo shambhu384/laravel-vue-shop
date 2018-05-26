@@ -17,6 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('tasks','TaskController');
-Route::resource('timesheets','TimesheetController');
-Route::resource('taskgroups','TaskGroupController');
+Route::resource('tasks','Api\TaskController');
+Route::resource('timesheets','Api\TimesheetController');
+Route::resource('taskgroups','Api\TaskGroupController');

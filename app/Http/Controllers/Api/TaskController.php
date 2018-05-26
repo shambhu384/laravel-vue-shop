@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use App\TaskGroup;
+use App\Http\Controllers\Controller;
+use App\Task;
 
-class TaskGroupController extends Controller
+class TaskController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,8 @@ class TaskGroupController extends Controller
      */
     public function index()
     {
-        return TaskGroup::all();
+        //
+        return Task::all();
     }
 
     /**
@@ -25,6 +27,7 @@ class TaskGroupController extends Controller
      */
     public function store(Request $request)
     {
+        //
     }
 
     /**
@@ -36,7 +39,7 @@ class TaskGroupController extends Controller
     public function show($id)
     {
         //
-        return TaskGroup::find($id);
+        return Task::find($id);
     }
 
     /**

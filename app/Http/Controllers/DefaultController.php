@@ -12,10 +12,6 @@ class DefaultController extends Controller
 {
     public function index() {
 
-
-        $podcast = array();
-//        ProcessPodcast::dispatch($podcast);
-
-        return array('tab' => TaskGroup::all());
+        return view('index');
     }
 }
