@@ -1,6 +1,7 @@
 <template>
 		<div class="container">
-			<h1 class="title is-1">Timesheet App</h1>
+			<p class="title is-1">Timesheet Appp</p>
+			<p class="subtitle is-3">Comperhensive Timesheet application</p>
 			<div class="notification is-success">
 			  <button class="delete"></button>
 			  Primar lorem ipsum. <strong>Pellentesque risus mi</strong>, tempus quis elit
@@ -11,6 +12,8 @@
 			<TaskComponent></TaskComponent>
 			<hr/>
 			<TaskComponent></TaskComponent>
+			<TaskHourComponent></TaskHourComponent>
+
 			<TimesheetActionComponent></TimesheetActionComponent>
 		</div>
 </template>
